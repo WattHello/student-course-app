@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+Student-Course Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Overview
 
-## Available Scripts
+The Student-Course Application is a web-based system designed to manage student and course information. Users can view, add, update, and delete records for students and courses. The application is built using React for the frontend and Express.js for the backend.
 
-In the project directory, you can run:
+Features
 
-### `npm start`
+- View a list of students and courses
+- Add new students and courses
+- Update existing student and course information
+- Delete students and courses
+- Filter students and courses based on various criteria
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Frontend: React, Axios, React Router
+- Backend: Node.js, Express.js
+- Data Storage: In-memory data (JavaScript arrays)
 
-### `npm test`
+Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Frontend Components
+App.js: Main component that sets up routing and overall structure.
+StudentList.js: Displays a list of all students.
+CourseList.js: Displays a list of all courses.
+AddStudent.js: Form component for adding a new student.
+AddCourse.js: Form component for adding a new course.
 
-### `npm run build`
+Backend Endpoints
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Students
+GET /api/students: Retrieve all students.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+GET /api/students/:id: Retrieve a specific student by ID.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+POST /api/students: Add a new student.
 
-### `npm run eject`
+PUT /api/students/:id: Update an existing student.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+DELETE /api/students/:id: Delete a student.
+Courses
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+GET /api/courses: Retrieve all courses.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+POST /api/courses: Add a new course.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+PUT /api/courses/:id: Update an existing course.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+DELETE /api/courses/:id: Delete a course.
